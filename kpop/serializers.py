@@ -1,4 +1,4 @@
-from kpop.models import KpopGroups, Members, Songs, GroupCat
+from kpop.models import KpopGroups, Members, Songs, GroupCat, Concerts
 from rest_framework import serializers
 
 
@@ -26,3 +26,9 @@ class SongsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Songs
         fields = ('id', 'title', 'released_date', 'genre', 'group_name')
+
+
+class ConcertsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Concerts
+        fields = ('id', 'venue', 'country', 'date', 'time', 'group_name')

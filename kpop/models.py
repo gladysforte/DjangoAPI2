@@ -16,7 +16,7 @@ class KpopGroups(models.Model):
     origin = models.CharField(max_length=200)
     website = models.URLField(max_length=200)
     alias = models.CharField(max_length=10)
-    group_category = models.ForeignKey(GroupCat, on_delete=models.CASCADE)
+    group_category = models.ForeignKey(GroupCat, on_delete=models.DO_NOTHING)
 
     def __str__(self):
         return self.group_name
@@ -27,14 +27,24 @@ class Members(models.Model):
     bday = models.DateField(auto_now=False, auto_now_add=False)
     gender = models.CharField(max_length=20)
     birthplace = models.CharField(max_length=50)
-    group_name = models.ForeignKey(KpopGroups, on_delete=models.CASCADE)
+    group_name = models.ForeignKey(KpopGroups, on_delete=models.DO_NOTHING)
 
 
 class Songs(models.Model):
     title = models.CharField(max_length=100)
     released_date = models.PositiveIntegerField()
     genre = models.CharField(max_length=50)
-    group_name = models.ForeignKey(KpopGroups, on_delete=models.CASCADE)
+    group_name = models.ForeignKey(KpopGroups, on_delete=models.DO_NOTHING)
+
+
+class Concerts(models.Model):
+    venue = models.CharField(max_length=100)
+    country = models.CharField(max_length=50)
+    date = models.DateField()
+    time = models.TimeField()
+    group_name = models.ForeignKey(KpopGroups, on_delete=models.DO_NOTHING)
+
+
 
 # class Role(models.Model):
 #     role = models.CharField(max_length=100)

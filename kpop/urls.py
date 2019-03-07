@@ -8,10 +8,12 @@ router.register(r'groupcat', views.GroupCatViewSet)
 router.register(r'kpopgroups', views.KpopGroupsViewSet)
 router.register(r'members', views.MembersViewSet)
 router.register(r'songs', views.SongsViewSet)
+router.register(r'concerts', views.ConcertsViewSet)
 
 # The API URLs are now determined automatically by the router.
 urlpatterns = [
     path('', include(router.urls)),
     path('kpopgroups/<int:pk>/members', views.GroupMembers.as_view()),
     path('kpopgroups/<int:pk>/songs', views.GroupSongs.as_view()),
+    path('kpopgroups/<int:pk>/concerts', views.GroupConcerts.as_view()),
 ]
