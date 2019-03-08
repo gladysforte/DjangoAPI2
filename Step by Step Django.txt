@@ -1,0 +1,90 @@
+1. Create Enviroment
+2. Create project
+3. Create app -  will serve as the per module
+4. 
+
+
+app > models - this will serve as the database migrations
+
+
+QuerySet Api
+Django Models
+Django Model Fields
+Rest
+
+https://docs.python.org/3/tutorial/datastructures.html
+
+MVT
+model
+view
+template
+
+Model 
+1. Setup of database fields
+
+View
+1. Controller - connector
+
+Serializers
+1. 
+
+Django Rest - PUT, GET, POST, DELETE, PATCH
+-Models
+-Views
+-Serializer
+
+Rest Tutorials
+Aarv Tech
+
+
+Questions:
+1. Is enviroment can be use to other project? Nope
+2. get_all_lexers
+3. imports list
+4. meaning of naka box sa codes
+5. use of serializers -   
+6. para saan si Meta - 
+
+------------------------------------
+
+1. ForeignAPI
+2. JSON
+3. Rest - Pattern 
+4. Restful - Pattern API
+5. Status Code
+6. Format ng Method
+7. QueryAPI
+8. ORM
+-------------------------------------------
+
+1. PATCH - part of field only
+2. PUT - whole data field
+3. on_delete = models.PROTECT
+   on_delete = models.DO_NOTHING
+
+4. ManytoManyField
+5. EndPoint with Parameters ? -> search
+-----------------------
+
+1. Concerts
+	- venue
+	- country
+	- date
+	- time
+	- kpopgroup
+
+2. Search Fields
+	- group
+	- year_establised
+
+
+http://localhost:8000/kpopgroups/?year_establised=2018
+https://www.youtube.com/watch?v=tG6O8YF91HE
+http://www.cdrf.co/
+
+
+--------------
+
+1. Auth.
+2. Html part
+3. 

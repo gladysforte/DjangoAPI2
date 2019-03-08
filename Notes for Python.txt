@@ -1,0 +1,88 @@
+Python 3.6
+Django 2. 
+
+---------------------------------------------------------------------------------------------------------
+
+Commands in CMD
+
+pip install virtualenv  # create virtual enviroment
+pip freeze  # checker of installed package
+virtualenv venv # create new enviroment
+python manage.py runserver  # run localhost
+venv\Scripts\activate   # activate enviroment
+django-admin startproject myproject    # create project
+pip install django  # install django 2 up
+python manage.py startapp polls   # create app
+python manage.py makemigrations   # create history of models in django
+python manage.py migrate   # migrate to DB created model
+pip  # show list of commands
+pip install mysql  #install mysql
+
+---------------------------------------------------------------------------------------------------------
+
+Documentations and Tutorials
+
+https://reqres.in/
+https://www.django-rest-framework.org/api-guide/serializers/
+https://docs.python.org/3/tutorial/datastructures.html
+https://www.youtube.com/watch?v=tG6O8YF91HE
+http://www.cdrf.co/    # modelviewset functions
+Aarv Tech = Django Rest   
+
+---------------------------------------------------------------------------------------------------------
+
+Database Connection
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'kpop',
+        'USER': 'root',
+        'PASSWORD': '123',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+    }
+}
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+QuerySet API
+Django Models
+Django Models Fields
+Django Rest API   # models, serializations, views, urls, pattern
+Restful API    #Method
+
+
+Status Code
+Format ng Method
+JSON
+ORM
+EndPoint with Parameters ? -> search
+---------------------------------------------------------------------------------------------------------
+
+
+on_delete = models.DO_NOTHING
+
+---------------------------------------------------------------------------------------------------------
+
+MVT
+
+Model
+View
+Template
+
+Model 
+1. Setup of database fields
+
+View
+1. Controller - connector
+
+Serializers
+1. Formatting JSON
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+1. Model, Serializations, Views, URLS

@@ -11,9 +11,9 @@ class GroupCatSerializer(serializers.ModelSerializer):
 class KpopGroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = KpopGroups
-        fields = ('id', 'group_name', 'year_established', 'origin',
-                  'website', 'alias', 'group_category')
-
+        # fields = ('id', 'group_name', 'year_established', 'origin',
+        #           'website', 'alias', 'group_category')
+        fields = '__all__'
 
 class MembersSerializer(serializers.ModelSerializer):
     class Meta:

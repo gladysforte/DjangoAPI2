@@ -1,0 +1,15 @@
+Create CRUD of Employee, 
+
+GET, POST , PUT, PATCH, DELETE
+
+Fields:
+- id
+- name
+- age
+- address
+- date_created - auto
+- date_updated - auto
+
+
+
+

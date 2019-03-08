@@ -1,0 +1,18 @@
+1. Install all pip
+2. Add to Settings > rest_framework
+3. Create Serializers
+4. Add to View
+5. Add to URLs.py app and project
+6. 
+
+model> view> serializer
+
+API - way to communicate to database
+JSON Format - [] - list  {} - object
+
+ModelViewSet
+Serializer - formatting
+
+Buong CRUD
+
+
