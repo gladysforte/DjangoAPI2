@@ -8,18 +8,29 @@ class GroupCatSerializer(serializers.ModelSerializer):
         fields = ('id', 'group_category')
 
 
-class KpopGroupSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = KpopGroups
-        # fields = ('id', 'group_name', 'year_established', 'origin',
-        #           'website', 'alias', 'group_category')
-        fields = '__all__'
-
 class MembersSerializer(serializers.ModelSerializer):
     class Meta:
         model = Members
         fields = ('id', 'fullname', 'bday', 'gender', 'birthplace',
                   'group_name')
+
+
+class KpopGroupSerializer(serializers.ModelSerializer):
+    #members = MembersSerializer(many=True, read_only=True)
+    # group_name = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    members = serializers.SerializerMethodField()
+
+    class Meta:
+        model = KpopGroups
+        fields = ('id', 'group_name', 'year_established', 'origin',
+                  'website', 'alias', 'group_category', 'members')
+        # fields = '__all__'
+
+
+    def get_members(self, obj):
+        members = Members.objects.filter(group_name_id=obj.id)
+        serializer = MembersSerializer(members, many=True)
+        return serializer.data
 
 
 class SongsSerializer(serializers.ModelSerializer):
